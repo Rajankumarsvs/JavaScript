@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+        function addLang (langName){
+                const li = document.createElement('Li')
+                li.innerHTML=`${langName}`
+                document.querySelector('.lang').appendChild(li)
+
+
+        }
+        addLang("python")
+        addLang("typescript")
+
+        function addOptlang(langName){
+            const li = document.createElement('Li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.lang').appendChild(li)
+
+        }
+        addOptlang('goLang')
+
+
+        // EDIT
+
+        const secondLang = document.querySelector("li:nth-child(2)")
+        secondLang.innerHTML="mojo" // you can write this way ya that way
+    //    const newli = document.createElement('li')  // ya this may
+    //    newli.textContent="mojo"
+    //    secondLang.replaceWith(newli)
+
+    // Edit
+
+        const firstLang = document.querySelector("li:first-child")
+        firstLang.outerHTML= '<li>"TypeScript"</li>'
+
+
+    // Remove
+
+      const lastLang = document.querySelector("li:last-child")
+      lastLang.remove()                                                                 // remove the elememt in the webpage
+
+         
+        </script>
+</html>
